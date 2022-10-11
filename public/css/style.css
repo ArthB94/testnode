@@ -1,0 +1,36 @@
+*{text-align: center;
+}
+.box{
+    border:solid 1px;
+    border-radius: 30px;
+    margin: 5%;
+    min-width: 740px;
+    background-color: rgb(230, 208, 251);
+    size: 100%;
+}
+.header{
+    font-size: 40px;
+}
+img{
+    border-radius: 30px;
+    size: 100%;
+}
+.btn{ 
+    border:solid 1px;
+    border-radius: 15px;
+    margin:  15px auto  15px auto;
+    background-color: rgb(31, 4, 57);
+    color:  rgb(230, 208, 251);
+    width: 100px;
+    height: 30px;
+}
+.btn p{
+    margin: 5%;
+}
+.btn:hover{
+    background-color: rgb(45, 6, 81);
+    color: rgb(251, 189, 234);
+
+    
+}
+    

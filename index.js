@@ -2,13 +2,26 @@ const express = require('express');
 const app = express();
 const port =10010
 
-app.use(express.static('public'));
+const users = [
+  { name: "Paul", age: "21", likes: "bread"},
+  { name: "Arthur", age: "20", likes: "radish"},
+  { name: "Fanny", age: "18", likes: "Boba"},
+  { name: "Julian", age: "19", likes: "Manga"},
+  { name: "Lucas", age: "22", likes: "Nutella"}
+]
+app.use(express.static('public'))
 
-app.get('/', function (req, res) {
-  res.sendFile(__dirname + '/Assignment2/index.html');
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/index.html')
+})
+
+ 
+app.get('/users/:id', (req, res) => {
+  res.json(users[parseInt(req.params.id) - 1])
 })
 
 
-app.listen(port, function () {
-  console.log('Example app listening on port  '+port);
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}!`)
 })
